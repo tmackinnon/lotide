@@ -11,14 +11,15 @@ const eqArrays = function(array1, array2) {
   return true;
 };
 
-//function will compare two arrays (using eqArrays function), will log if the assertion passed or failed
 const assertArraysEqual = function(array1, array2) {
+  
   if (!eqArrays(array1, array2)) {
-    console.log(`❌ Assertion Failed`);
+    console.log(`❌ Assertion Failed: ${array1} !== ${array2}`);
     return;
   }
-  console.log(`✅ Assertion Passed`);
+  console.log(`✅ Assertion Passed: ${array1} === ${array2}`);
 };
+
 // Flattens array a single level deep
 const flatten = function(input) {
   // create variable to be final output
