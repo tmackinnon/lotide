@@ -8,8 +8,8 @@ const eqArrays = function(array1, array2) {
       return false;
     }
   }
-  return true; 
-}
+  return true;
+};
 
 //function will compare two arrays (using eqArrays function), will log if the assertion passed or failed
 const assertArraysEqual = function(array1, array2) {
@@ -31,10 +31,15 @@ const without = function(source, itemsToRemove) {
     }
   }
   return newArray;
-}
+};
 
-const words = ["hello", "world", "lighthouse"];
-console.log(without(words, ["lighthouse", "tara"])); //["hello", "world"]
-
+//Test 1:
+console.log(without(["1", "2", "3"], [1, 2, "3"]));
 // Make sure the original array was not altered by the without function:
-assertArraysEqual(words, ["hello", "world", "lighthouse"]); // pass 
+assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]); // pass
+
+//Test 2:
+const words = ["hello", "world", "lighthouse"];
+without(words, ["lighthouse"]);
+// Make sure the original array was not altered by the without function
+assertArraysEqual(words, ["hello", "world", "lighthouse"]);
