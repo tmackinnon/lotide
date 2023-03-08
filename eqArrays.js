@@ -11,17 +11,20 @@ const assertEqual = function(actual, expected) {
 };
 
 const eqArrays = function(array1, array2) {
-  // let equal be true so that it can change via the if statement
-  let equal = true
+  //check that the lengths of the arrays match, otherwise return false
+  if (array1.length !== array2.length) {
+    return false;
+  }
 
-  // loop through the elements in each array 
-  for (let i = 0; i <array1.length; i++) {
-    // if corresponding elements in arrays don't match, reassign equal to false otherwise it stays true
+  //// loop through the elements in each array 
+  for (let i = 0; i < array1.length; i++) {
+    //if the element doesn't match then stop the loop and return false
     if (array1[i] !== array2[i]) {
-      equal = false;  
+      return false;
     }
   }
-  return equal;
+  //otherwise return true
+  return true; 
 }
 
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", 3]), true);  
+assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true);  
