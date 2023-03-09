@@ -25,20 +25,19 @@ const eqArrays = function(array1, array2) {
 
 // FUNCTION eqObjects
 const eqObjects = function(object1, object2) {
-  let key1 = Object.keys(object1)
+  let key1 = Object.keys(object1) 
   let key2 = Object.keys(object2)
-  //compare the number of keys in each object
-  // or shoud I be comparing the two arrays 
+  //compare key length 
   if (key1.length !== key2.length) {
     return false;
   }
-  
-  // compare the value for each key in one object - is it the same as the value for that same key in the other object
+  // loop through the keys
   for (let key of key1) {
+    //if the key values don't match they check if they are arrays, otherwise return false
     if (object1[key] !== object2[key]) {
-
+      //if the values are arrays, compare them 
       if (Array.isArray(object1[key])) {
-
+        // if the arrays dont match return false
         if (!eqArrays(object1[key], object2[key])) {
           return false;
         }
@@ -60,7 +59,7 @@ const eqObjects = function(object1, object2) {
 
 
 //Test 2 (should pass):
-const multiColorShirtObject = { colors: ["red", "blue"], size: ["medium", "mall"] };
+const multiColorShirtObject = { colors: ["red", "blue"], size: ["medium", "large"] };
 const anotherMultiColorShirtObject = { size: ["medium", "small"], colors: ["red", "blue"] };
 assertEqual(eqObjects(multiColorShirtObject  , anotherMultiColorShirtObject), false); // pass
 
