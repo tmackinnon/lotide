@@ -2,11 +2,11 @@ const middle = require('../middle');
 const assert = require('chai').assert;
 
 describe("#middle", () => {
-  
+
   it("returns ['3'] as the middle value for [1, '3', '3']", () => {
     assert.deepEqual(middle([1, '3', '3']), ['3']);
   });
-  
+
   it("returns [] as the middle value for ['1']", () => {
     assert.deepEqual(middle(['1']), []);
   });
