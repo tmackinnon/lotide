@@ -7,7 +7,6 @@ describe("#tail", () => {
   it("returns ['Lighthouse', 'Labs'] for ['Yo Yo', 'Lighthouse', 'Labs']", () => {
     const words = ["Yo Yo", "Lighthouse", "Labs"];
     assert.deepEqual(tail(words), ["Lighthouse", "Labs"]);
-    assert.strictEqual(words.length, 3);
   });
 
   it("returns 3 for words array because the original array length should not change", () => {
