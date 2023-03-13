@@ -1,15 +1,3 @@
-const assertEqual = function(actual, expected) {
-  //if two inputs don't match
-  if (actual !== expected) {
-    console.log(`❌ Assertion Failed: ${actual} !== ${expected}`);
-    return;
-  }
-
-  //if two inputs match
-  console.log(`✅ Assertion Passed: ${actual} === ${expected}`);
-
-};
-
 const eqArrays = function(array1, array2) {
   //check that the lengths of the arrays match, otherwise return false
   if (array1.length !== array2.length) {
@@ -27,4 +15,4 @@ const eqArrays = function(array1, array2) {
   return true; 
 }
 
-assertEqual(eqArrays(["1", "2", "3"], ["1", "2", "3"]), true);  
+module.exports = eqArrays;
