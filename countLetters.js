@@ -26,5 +26,6 @@ for (letter of string) {
 return letterCount;
 }
 
-//Test
-console.log(countLetters("lighthouse labs"));
+module.exports = countLetters;
+
+

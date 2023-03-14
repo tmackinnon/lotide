@@ -42,6 +42,7 @@ const letterPositions = function(sentence) {
   return results;
 };
 
+module.exports = letterPositions;
 
 //test:
-assertArraysEqual(letterPositions("tara").a, [1, 3]);
+// assertArraysEqual(letterPositions("tara").a, [1, 3]);

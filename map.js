@@ -28,13 +28,16 @@ const map = function(array, callback) {
   return results;
 }
 
-const words = ["ground", "control", "to", "major", "tom"];
-const numbers = [1, 2, 3, 4, 5]
+module.exports = map;
 
-const results1 = map(words, word => word[0]);
-const results2 = map(words, word => word + "ya");
-const results3 = map(numbers, num => 4);
+// Test
+// const words = ["ground", "control", "to", "major", "tom"];
+// const numbers = [1, 2, 3, 4, 5]
 
-assertArraysEqual(results1, [ 'g', 'c', 't', 'm', 't' ]);
-assertArraysEqual(results2, ['groundya', 'controlya', 'toya', 'majorya', 'tomya']);
-assertArraysEqual(results3, [4, 4, 4, 4, 4]);
+// const results1 = map(words, word => word[0]);
+// const results2 = map(words, word => word + "ya");
+// const results3 = map(numbers, num => 4);
+
+// assertArraysEqual(results1, [ 'g', 'c', 't', 'm', 't' ]);
+// assertArraysEqual(results2, ['groundya', 'controlya', 'toya', 'majorya', 'tomya']);
+// assertArraysEqual(results3, [4, 4, 4, 4, 4]);

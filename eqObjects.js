@@ -56,6 +56,8 @@ const eqObjects = function(object1, object2) {
   return true;
 };
 
+module.exports = eqObjects;
+
 // // Tests
 // //Test 1 (should pass):
 // const shirtObject = { color: "red", size: "medium" };

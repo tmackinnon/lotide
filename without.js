@@ -33,13 +33,15 @@ const without = function(source, itemsToRemove) {
   return newArray;
 };
 
-//Test 1:
-console.log(without(["1", "2", "3"], [1, 2, "3"]));
-// Make sure the original array was not altered by the without function:
-assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]); // pass
+module.exports = without;
 
-//Test 2:
-const words = ["hello", "world", "lighthouse"];
-without(words, ["lighthouse"]);
-// Make sure the original array was not altered by the without function
-assertArraysEqual(words, ["hello", "world", "lighthouse"]);
+// //Test 1:
+// console.log(without(["1", "2", "3"], [1, 2, "3"]));
+// // Make sure the original array was not altered by the without function:
+// assertArraysEqual(without(["1", "2", "3"], [1, 2, "3"]), ["1", "2"]); // pass
+
+// //Test 2:
+// const words = ["hello", "world", "lighthouse"];
+// without(words, ["lighthouse"]);
+// // Make sure the original array was not altered by the without function
+// assertArraysEqual(words, ["hello", "world", "lighthouse"]);

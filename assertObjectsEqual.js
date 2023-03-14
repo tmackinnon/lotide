@@ -58,3 +58,5 @@ const assertObjectsEqual = function(actual, expected) {
 // const shirt1 = { colors: ["red", "blue"], size: ["medium", "small"] };
 // const shirt2 = { size: ["medium", "small"], colors: ["red", "blue"] };
 // assertObjectsEqual(shirt1, shirt2);
+
+module.exports = assertObjectsEqual;

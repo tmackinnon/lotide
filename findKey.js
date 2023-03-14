@@ -18,19 +18,21 @@ const findKey = function(object, callback) {
   }
 };
 
-//Test:
-const object = {
-  "Blue Hill": { stars: 1 },
-  "Akaleri": { stars: 3 },
-  "noma": { stars: 2 },
-  "elBulli": { stars: 3 },
-  "Ora": { stars: 3 },
-  "Akelarre": { stars: 3 }
-};
+module.exports = findKey;
 
-let results1 = findKey(object, x => x.stars !== 2);
+// //Test:
+// const object = {
+//   "Blue Hill": { stars: 1 },
+//   "Akaleri": { stars: 3 },
+//   "noma": { stars: 2 },
+//   "elBulli": { stars: 3 },
+//   "Ora": { stars: 3 },
+//   "Akelarre": { stars: 3 }
+// };
 
-let results2 = findKey(object, x => x.stars === 6);
+// let results1 = findKey(object, x => x.stars !== 2);
 
-assertEqual(results1, "Blue Hill");
-assertEqual(results2, undefined);
+// let results2 = findKey(object, x => x.stars === 6);
+
+// assertEqual(results1, "Blue Hill");
+// assertEqual(results2, undefined);
